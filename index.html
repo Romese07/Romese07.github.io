@@ -71,15 +71,18 @@
         }
 
         .logo-img {
-            height: 50px;
+            height: 80px;          /* tamaño medio rectangular */
+            max-width: 260px;      /* limita el ancho para que no ocupe todo el header */
             width: auto;
+            object-fit: contain;   /* mantiene la proporción */
+            display: block;
         }
 
         .logo-text {
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
             font-size: 1.5rem;
-            margin-left: 10px;
+            margin-left: 16px; /* un poco más de espacio para logo rectangular */
             color: var(--light);
         }
 
