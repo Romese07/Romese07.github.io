@@ -55,7 +55,7 @@
             z-index: 1000;
             background: rgba(10, 10, 10, 0.9);
             backdrop-filter: blur(10px);
-            padding: 15px 0;
+            padding: 10px 0;       /* reduce padding para que quepa mejor */
             transition: var(--transition);
         }
 
@@ -71,8 +71,8 @@
         }
 
         .logo-img {
-            height: 110px;         /* tamaño mayor para logo rectangular */
-            max-width: 360px;      /* límite de ancho para que no ocupe todo el header */
+            height: 140px;         /* 25% más grande - tamaño XL para logo rectangular */
+            max-width: 450px;      /* límite de ancho aumentado */
             width: auto;
             object-fit: contain;   /* mantiene la proporción */
             display: block;
@@ -120,17 +120,18 @@
 
         /* HERO SECTION */
         .hero {
-            height: 100vh;
-            background: 
-                linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.9)),
-                url('./IMAGES/logo_circulo_rojo_y_negro.jpg.PNG') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 90px; /* ajusta para el logo más alto */
+             height: 100vh;
+             background: 
+                 linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.9)),
+                 url('./IMAGES/logo_circulo_rojo_y_negro.jpg.PNG') center/cover no-repeat;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+             position: relative;
+             overflow: hidden;
+-            margin-top: 90px; /* ajusta para el logo más alto */
++            margin-top: 120px; /* ajusta para el logo mucho más grande */
         }
 
         .hero-content {
@@ -755,7 +756,7 @@
             <div class="about-text">
                 <h3>Román Meseguer</h3>
                 <p>Hola, soy <strong>Román Meseguer</strong>, practicante de JiuJitsu desde 2012. Comencé mi camino en Venezuela, continué mi crecimiento en Barcelona y actualmente entreno con el equipo <strong>Tizona</strong> bajo la línea de <strong>Cicero Costha</strong>.</p>
-                <p>A lo largo de los años he tenido el privilegio de entrenar con grandes maestros y construir una filosofía basada en disciplina, humildad, marcialidad y trabajo duro. Hoy combino mi rol de competidor con el de instructor, especialmente enfocado en la formación de niños.</p>
+                <p>A lo largo de los años he tenido el privilegio de entrenar con grandes maestros y construir una filosofía basada en disciplina, humildad, marcialidad y trabajo duro. Hoy combino mi rol de competidor con el de instructor, enfocado en la formación de atletas, guerreros y personas de todas las edades que busquen crecer, comenzar o continuar su camino en el Arte Suave.</p>
                 <p>Mi objetivo es transmitir los valores del JiuJitsu a las nuevas generaciones mientras continúo mi desarrollo como competidor y artista marcial.</p>
             </div>
             <div class="profile-photo">
@@ -818,8 +819,8 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <span class="timeline-year">Actualidad</span>
-                    <h4>Instructor y Competidor</h4>
-                    <p>Instructor de niños · Entreno 5 días por semana</p>
+                    <h4>Aprendiz Instructor y Competidor Activo</h4>
+                    <p>En la búsqueda de la excelencia</p>
                 </div>
             </div>
         </div>
