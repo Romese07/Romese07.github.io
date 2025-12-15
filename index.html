@@ -376,7 +376,45 @@
             padding: 0 20px;
         }
 
-        /* ABOUT SECTION - CORREGIDO PARA FOTO VERTICAL */
+        /* LOGOS STYLES */
+        .logos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .affiliate-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0.95);
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+
+        .affiliate-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .schedule-logo {
+            height: 50px;
+            margin: 15px auto;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .timeline-logo {
+            height: 40px;
+            margin: 10px 0;
+            display: block;
+        }
+
+        /* ABOUT SECTION */
         .about-content {
             display: flex;
             align-items: center;
@@ -407,9 +445,8 @@
             position: relative;
             border: 3px solid transparent;
             transition: var(--transition);
-            /* Optimizado para fotos verticales */
-            aspect-ratio: 2/3; /* Proporción vertical típica */
-            min-height: 400px; /* Altura mínima para escritorio */
+            aspect-ratio: 2/3;
+            min-height: 400px;
         }
 
         .profile-photo:hover {
@@ -419,8 +456,8 @@
 
         .profile-photo img {
             width: 100%;
-            height: 100%; /* Cambiado de height fija a 100% */
-            object-fit: cover; /* Esto es clave para fotos verticales */
+            height: 100%;
+            object-fit: cover;
             display: block;
             transition: var(--transition);
         }
@@ -429,7 +466,7 @@
             transform: scale(1.05);
         }
 
-        /* TIMELINE SECTION */
+        /* TIMELINE SECTION - CORREGIDO PARA MÓVIL */
         .timeline-section {
             background: #111;
         }
@@ -504,6 +541,29 @@
             color: #DDD;
         }
 
+        /* CORRECCIÓN PARA TIMELINE EN MÓVIL */
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding: 0 0 0 50px;
+                margin-bottom: 30px;
+            }
+
+            .timeline-content {
+                padding: 20px;
+            }
+
+            .timeline-year {
+                font-size: 0.8rem;
+                padding: 6px 15px;
+            }
+        }
+
         /* VALUES SECTION */
         .values-grid {
             display: grid;
@@ -563,6 +623,7 @@
             text-align: center;
             transition: var(--transition);
             border-top: 4px solid var(--primary);
+            position: relative;
         }
 
         .schedule-card:hover {
@@ -791,7 +852,7 @@
             }
         }
 
-        /* RESPONSIVE DESIGN - CORREGIDO PARA FOTO VERTICAL */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
@@ -801,9 +862,17 @@
             .profile-photo {
                 flex: 0 0 auto;
                 width: 100%;
-                max-width: 350px; /* Aumentado para móvil */
+                max-width: 350px;
                 margin: 30px auto 0;
-                min-height: 450px; /* Más alta en tablet */
+                min-height: 450px;
+            }
+
+            .logos-container {
+                gap: 20px;
+            }
+
+            .affiliate-logo {
+                height: 50px;
             }
         }
 
@@ -886,8 +955,16 @@
             }
             
             .profile-photo {
-                max-width: 320px; /* Más grande en móvil */
-                min-height: 480px; /* Altura específica para móvil */
+                max-width: 320px;
+                min-height: 480px;
+            }
+
+            .schedule-logo {
+                height: 40px;
+            }
+
+            .affiliate-logo {
+                height: 40px;
             }
         }
 
@@ -916,8 +993,8 @@
             
             .profile-photo {
                 max-width: 280px;
-                width: 90%; /* Usar porcentaje del ancho disponible */
-                min-height: 420px; /* Altura óptima para móviles pequeños */
+                width: 90%;
+                min-height: 420px;
             }
             
             .schedule-container {
@@ -926,6 +1003,14 @@
             
             .timeline-content {
                 padding: 20px;
+            }
+
+            .affiliate-logo {
+                height: 35px;
+            }
+
+            .schedule-logo {
+                height: 35px;
             }
         }
 
@@ -949,8 +1034,8 @@
 <header class="header">
     <div class="container header-container">
         <a href="#" class="logo">
-            <!-- RUTA VERIFICADA -->
-            <img src="./IMAGES/logo_circulo_rojo_y_negro.jpg.PNG" alt="Meseguer Brothers JiuJitsu" class="logo-img">
+            <!-- LOGO PRINCIPAL - RUTA EXACTA -->
+            <img src="./IMAGES/logo_circulo_rojo_y_negro.PNG" alt="Meseguer Brothers JiuJitsu" class="logo-img">
             <div class="logo-text">MESEGUER BROTHERS</div>
         </a>
         <button class="mobile-menu-btn" aria-label="Abrir menú">
@@ -973,6 +1058,16 @@
         <div class="hero-badge">CINTURÓN MORADO · CICERO COSTHA</div>
         <h1>MESEGUER BROTHERS JIUJITSU</h1>
         <p>Instructor · Competidor · Formador de Campeones · Barcelona & Castelldefels</p>
+        
+        <!-- Logos de afiliación en Hero -->
+        <div class="logos-container" style="margin-top: 40px;">
+            <!-- CICERO COSTHA - RUTA EXACTA -->
+            <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha Barcelona" class="affiliate-logo">
+            
+            <!-- TIZONA - RUTA EXACTA -->
+            <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona JiuJitsu" class="affiliate-logo">
+        </div>
+        
         <div class="hero-buttons">
             <a href="#perfil" class="btn-main">Conoce Mi Historia</a>
             <a href="#contacto" class="btn-secondary">Únete al Equipo</a>
@@ -994,11 +1089,18 @@
             <div class="about-text">
                 <h3>Román Meseguer</h3>
                 <p>Hola, soy <strong>Román Meseguer</strong>, practicante de JiuJitsu desde 2012. Comencé mi camino en Venezuela, continué mi crecimiento en Barcelona y actualmente entreno con el equipo <strong>Tizona</strong> bajo la línea de <strong>Cicero Costha</strong>.</p>
+                
+                <!-- Logos en sección Sobre Mí -->
+                <div class="logos-container" style="margin: 25px 0;">
+                    <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
+                    <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
+                </div>
+                
                 <p>A lo largo de los años he tenido el privilegio de entrenar con grandes maestros y construir una filosofía basada en disciplina, humildad, marcialidad y trabajo duro. Hoy combino mi rol de competidor con el de instructor, enfocado en la formación de atletas, guerreros y personas de todas las edades que busquen crecer, comenzar o continuar su camino en el Arte Suave.</p>
                 <p>Mi objetivo es transmitir los valores del JiuJitsu a las nuevas generaciones mientras continúo mi desarrollo como competidor y artista marcial.</p>
             </div>
             <div class="profile-photo">
-                <!-- RUTA VERIFICADA -->
+                <!-- FOTO DE PERFIL - RUTA EXACTA -->
                 <img src="./IMAGES/roman_perfil.jpeg" alt="Román Meseguer - Instructor de JiuJitsu">
             </div>
         </div>
@@ -1046,6 +1148,8 @@
                     <span class="timeline-year">2022</span>
                     <h4>Tizona / Cicero Costha</h4>
                     <p>Castelldefels con Edu Da Casa, José Muriel y Cristofer Opazos</p>
+                    <!-- Logo Tizona en timeline -->
+                    <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="timeline-logo">
                 </div>
             </div>
             <div class="timeline-item">
@@ -1053,6 +1157,8 @@
                     <span class="timeline-year">2024</span>
                     <h4>Cinturón Morado</h4>
                     <p>Otorgado por Edu Da Casa & Cicero Costha</p>
+                    <!-- Logo Cicero Costha en timeline -->
+                    <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="timeline-logo">
                 </div>
             </div>
             <div class="timeline-item">
@@ -1120,7 +1226,7 @@
     </div>
 </section>
 
-<!-- SCHEDULE SECTION -->
+<!-- SCHEDULE SECTION CON LOGOS -->
 <section id="horarios" class="schedule-section">
     <div class="container">
         <div class="section-header">
@@ -1130,17 +1236,33 @@
         <div class="schedule-container">
             <div class="schedule-card">
                 <h3>CLASES KIDS</h3>
+                <!-- Logo Tizona Kids - RUTA EXACTA -->
+                <img src="./IMAGES/TIZONA_KIDS_LOGO_BJJ.png" alt="Tizona Kids" class="schedule-logo">
                 <p><span class="schedule-highlight">Lunes, Miércoles y Viernes</span></p>
                 <p>17:30 — 18:30</p>
                 <p>Tizona Sparta Fight Club · Castelldefels</p>
+                <!-- Logo Tizona principal - RUTA EXACTA -->
+                <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="schedule-logo" style="margin-top: 20px;">
             </div>
             <div class="schedule-card">
                 <h3>ADULTOS</h3>
+                <!-- Logo Daithon Gym - RUTA EXACTA -->
+                <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="schedule-logo">
                 <p><span class="schedule-highlight">Martes y Jueves</span></p>
                 <p>19:00 — 20:30</p>
                 <p>Gimnasio Dayton · L'Hospitalet</p>
                 <p>Open Mat / Drill / Gi / No-Gi · Todos los niveles</p>
+                <!-- Logo Cicero Costha - RUTA EXACTA -->
+                <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="schedule-logo" style="margin-top: 20px;">
             </div>
+        </div>
+        
+        <!-- Logos de afiliación al final de horarios -->
+        <div class="logos-container" style="margin-top: 50px;">
+            <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
+            <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
+            <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="affiliate-logo">
+            <img src="./IMAGES/TIZONA_KIDS_LOGO_BJJ.png" alt="Tizona Kids" class="affiliate-logo">
         </div>
     </div>
 </section>
@@ -1209,6 +1331,14 @@
         <div class="footer-content">
             <div class="footer-logo">MESEGUER BROTHERS JIUJITSU</div>
             <p>Instructor · Competidor · Formador de Campeones</p>
+            
+            <!-- Logos en footer -->
+            <div class="logos-container" style="margin: 25px 0;">
+                <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
+                <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
+                <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="affiliate-logo">
+            </div>
+            
             <div class="footer-links">
                 <a href="#perfil">Sobre Mí</a>
                 <a href="#horarios">Clases</a>
