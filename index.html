@@ -376,18 +376,18 @@
             padding: 0 20px;
         }
 
-        /* LOGOS STYLES */
+        /* LOGOS STYLES - AUMENTADOS DE TAMAÑO */
         .logos-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 40px; /* Más espacio entre logos */
             margin-top: 20px;
         }
 
         .affiliate-logo {
-            height: 60px;
+            height: 100px; /* Aumentado de 60px a 100px */
             width: auto;
             object-fit: contain;
             filter: brightness(0.95);
@@ -402,15 +402,15 @@
         }
 
         .schedule-logo {
-            height: 50px;
-            margin: 15px auto;
+            height: 80px; /* Aumentado de 50px a 80px */
+            margin: 20px auto; /* Más margen */
             display: block;
             opacity: 0.9;
         }
 
         .timeline-logo {
-            height: 40px;
-            margin: 10px 0;
+            height: 60px; /* Aumentado de 40px a 60px */
+            margin: 15px 0; /* Más margen */
             display: block;
         }
 
@@ -852,7 +852,7 @@
             }
         }
 
-        /* RESPONSIVE DESIGN */
+        /* RESPONSIVE DESIGN CON LOGOS MÁS GRANDES */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
@@ -868,11 +868,15 @@
             }
 
             .logos-container {
-                gap: 20px;
+                gap: 30px;
             }
 
             .affiliate-logo {
-                height: 50px;
+                height: 80px; /* Reducido ligeramente para tablet */
+            }
+
+            .schedule-logo {
+                height: 70px; /* Reducido ligeramente para tablet */
             }
         }
 
@@ -959,12 +963,16 @@
                 min-height: 480px;
             }
 
-            .schedule-logo {
-                height: 40px;
+            .affiliate-logo {
+                height: 70px; /* Reducido para móvil pero aún grande */
             }
 
-            .affiliate-logo {
-                height: 40px;
+            .schedule-logo {
+                height: 60px; /* Reducido para móvil pero aún grande */
+            }
+
+            .timeline-logo {
+                height: 50px; /* Reducido para móvil */
             }
         }
 
@@ -1006,11 +1014,15 @@
             }
 
             .affiliate-logo {
-                height: 35px;
+                height: 60px; /* Reducido para móviles pequeños */
             }
 
             .schedule-logo {
-                height: 35px;
+                height: 50px; /* Reducido para móviles pequeños */
+            }
+
+            .timeline-logo {
+                height: 40px; /* Reducido para móviles pequeños */
             }
         }
 
@@ -1034,7 +1046,7 @@
 <header class="header">
     <div class="container header-container">
         <a href="#" class="logo">
-            <!-- LOGO PRINCIPAL - RUTA EXACTA -->
+            <!-- LOGO PRINCIPAL -->
             <img src="./IMAGES/logo_circulo_rojo_y_negro.PNG" alt="Meseguer Brothers JiuJitsu" class="logo-img">
             <div class="logo-text">MESEGUER BROTHERS</div>
         </a>
@@ -1059,13 +1071,9 @@
         <h1>MESEGUER BROTHERS JIUJITSU</h1>
         <p>Instructor · Competidor · Formador de Campeones · Barcelona & Castelldefels</p>
         
-        <!-- Logos de afiliación en Hero -->
+        <!-- SOLO LOGO DE CICERO COSTHA EN HERO (sin Tizona) -->
         <div class="logos-container" style="margin-top: 40px;">
-            <!-- CICERO COSTHA - RUTA EXACTA -->
             <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha Barcelona" class="affiliate-logo">
-            
-            <!-- TIZONA - RUTA EXACTA -->
-            <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona JiuJitsu" class="affiliate-logo">
         </div>
         
         <div class="hero-buttons">
@@ -1090,8 +1098,8 @@
                 <h3>Román Meseguer</h3>
                 <p>Hola, soy <strong>Román Meseguer</strong>, practicante de JiuJitsu desde 2012. Comencé mi camino en Venezuela, continué mi crecimiento en Barcelona y actualmente entreno con el equipo <strong>Tizona</strong> bajo la línea de <strong>Cicero Costha</strong>.</p>
                 
-                <!-- Logos en sección Sobre Mí -->
-                <div class="logos-container" style="margin: 25px 0;">
+                <!-- Logos en sección Sobre Mí - AHORA MÁS GRANDES -->
+                <div class="logos-container" style="margin: 30px 0;">
                     <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
                     <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
                 </div>
@@ -1100,7 +1108,6 @@
                 <p>Mi objetivo es transmitir los valores del JiuJitsu a las nuevas generaciones mientras continúo mi desarrollo como competidor y artista marcial.</p>
             </div>
             <div class="profile-photo">
-                <!-- FOTO DE PERFIL - RUTA EXACTA -->
                 <img src="./IMAGES/roman_perfil.jpeg" alt="Román Meseguer - Instructor de JiuJitsu">
             </div>
         </div>
@@ -1148,7 +1155,7 @@
                     <span class="timeline-year">2022</span>
                     <h4>Tizona / Cicero Costha</h4>
                     <p>Castelldefels con Edu Da Casa, José Muriel y Cristofer Opazos</p>
-                    <!-- Logo Tizona en timeline -->
+                    <!-- Logo Tizona en timeline - AHORA MÁS GRANDE -->
                     <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="timeline-logo">
                 </div>
             </div>
@@ -1157,7 +1164,7 @@
                     <span class="timeline-year">2024</span>
                     <h4>Cinturón Morado</h4>
                     <p>Otorgado por Edu Da Casa & Cicero Costha</p>
-                    <!-- Logo Cicero Costha en timeline -->
+                    <!-- Logo Cicero Costha en timeline - AHORA MÁS GRANDE -->
                     <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="timeline-logo">
                 </div>
             </div>
@@ -1226,7 +1233,7 @@
     </div>
 </section>
 
-<!-- SCHEDULE SECTION CON LOGOS -->
+<!-- SCHEDULE SECTION CON LOGOS MÁS GRANDES -->
 <section id="horarios" class="schedule-section">
     <div class="container">
         <div class="section-header">
@@ -1236,29 +1243,29 @@
         <div class="schedule-container">
             <div class="schedule-card">
                 <h3>CLASES KIDS</h3>
-                <!-- Logo Tizona Kids - RUTA EXACTA -->
+                <!-- Logo Tizona Kids - AHORA MÁS GRANDE -->
                 <img src="./IMAGES/TIZONA_KIDS_LOGO_BJJ.png" alt="Tizona Kids" class="schedule-logo">
                 <p><span class="schedule-highlight">Lunes, Miércoles y Viernes</span></p>
                 <p>17:30 — 18:30</p>
                 <p>Tizona Sparta Fight Club · Castelldefels</p>
-                <!-- Logo Tizona principal - RUTA EXACTA -->
-                <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="schedule-logo" style="margin-top: 20px;">
+                <!-- Logo Tizona principal - AHORA MÁS GRANDE -->
+                <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="schedule-logo" style="margin-top: 25px;">
             </div>
             <div class="schedule-card">
                 <h3>ADULTOS</h3>
-                <!-- Logo Daithon Gym - RUTA EXACTA -->
+                <!-- Logo Daithon Gym - AHORA MÁS GRANDE -->
                 <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="schedule-logo">
                 <p><span class="schedule-highlight">Martes y Jueves</span></p>
                 <p>19:00 — 20:30</p>
                 <p>Gimnasio Dayton · L'Hospitalet</p>
                 <p>Open Mat / Drill / Gi / No-Gi · Todos los niveles</p>
-                <!-- Logo Cicero Costha - RUTA EXACTA -->
-                <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="schedule-logo" style="margin-top: 20px;">
+                <!-- Logo Cicero Costha - AHORA MÁS GRANDE -->
+                <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="schedule-logo" style="margin-top: 25px;">
             </div>
         </div>
         
-        <!-- Logos de afiliación al final de horarios -->
-        <div class="logos-container" style="margin-top: 50px;">
+        <!-- Logos de afiliación al final de horarios - AHORA MÁS GRANDES -->
+        <div class="logos-container" style="margin-top: 60px;">
             <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
             <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
             <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="affiliate-logo">
@@ -1332,8 +1339,8 @@
             <div class="footer-logo">MESEGUER BROTHERS JIUJITSU</div>
             <p>Instructor · Competidor · Formador de Campeones</p>
             
-            <!-- Logos en footer -->
-            <div class="logos-container" style="margin: 25px 0;">
+            <!-- Logos en footer - AHORA MÁS GRANDES -->
+            <div class="logos-container" style="margin: 30px 0;">
                 <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
                 <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
                 <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="affiliate-logo">
