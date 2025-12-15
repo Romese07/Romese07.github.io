@@ -41,11 +41,16 @@
     
     <style>
         :root {
-            --primary: #FF0000;
+            /* NUEVA PALETA DE COLORES - ROJOS MÁS PROFUNDOS Y ELEGANTES */
+            --primary: #8B0000; /* Rojo oscuro (Dark Red) - más serio */
+            --primary-dark: #5A0000; /* Rojo muy oscuro para hover */
+            --primary-light: #A52A2A; /* Rojo marrón para detalles */
             --secondary: #000000;
             --dark: #0A0A0A;
+            --darker: #050505; /* Más oscuro para contraste */
             --light: #F5F5F5;
-            --gray: #2A2A2A;
+            --gray: #1A1A1A; /* Más oscuro */
+            --gray-light: #2A2A2A;
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
@@ -60,7 +65,7 @@
         }
 
         body {
-            background: var(--dark);
+            background: var(--darker); /* Fondo más oscuro */
             color: var(--light);
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
@@ -87,17 +92,17 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(5, 5, 5, 0.95); /* Más oscuro */
             backdrop-filter: blur(10px);
             padding: 10px 0;
             transition: var(--transition);
-            border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(139, 0, 0, 0.2); /* Rojo oscuro */
         }
 
         .header.scrolled {
             padding: 5px 0;
-            background: rgba(10, 10, 10, 0.98);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            background: rgba(5, 5, 5, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
         }
 
         .header-container {
@@ -117,6 +122,7 @@
             width: auto;
             object-fit: contain;
             transition: var(--transition);
+            filter: brightness(0.95);
         }
 
         .header.scrolled .logo-img {
@@ -173,7 +179,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--primary-light);
         }
 
         .nav-links a:hover:after {
@@ -193,15 +199,15 @@
         }
 
         .mobile-menu-btn:hover {
-            color: var(--primary);
+            color: var(--primary-light);
         }
 
         /* HERO SECTION */
         .hero {
             min-height: 100vh;
             background: 
-                linear-gradient(135deg, rgba(255, 0, 0, 0.2) 0%, rgba(10, 10, 10, 0.95) 100%),
-                linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9));
+                linear-gradient(135deg, rgba(139, 0, 0, 0.15) 0%, rgba(5, 5, 5, 0.95) 100%), /* Rojo oscuro */
+                linear-gradient(rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.95)); /* Más oscuro */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -219,8 +225,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.04) 0%, transparent 50%);
             z-index: 1;
         }
 
@@ -242,19 +248,21 @@
             margin-bottom: 30px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2); /* Sombra más sutil */
+            border: 1px solid rgba(139, 0, 0, 0.3);
         }
 
         .hero-content h1 {
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             margin-bottom: 20px;
             text-transform: uppercase;
-            background: linear-gradient(to right, var(--primary), #FF6B6B);
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: 2px;
             line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .hero-content p {
@@ -286,7 +294,7 @@
             transition: var(--transition);
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.25); /* Sombra más suave */
             border: 2px solid var(--primary);
             cursor: pointer;
             min-width: 200px;
@@ -295,8 +303,9 @@
 
         .btn-main:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
-            background: #FF3333;
+            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3);
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
         }
 
         .btn-secondary {
@@ -317,9 +326,10 @@
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 0, 0, 0.1);
+            background: rgba(139, 0, 0, 0.15); /* Fondo rojo muy tenue */
             transform: translateY(-3px);
             color: white;
+            border-color: var(--primary-light);
         }
 
         .scroll-indicator {
@@ -337,7 +347,7 @@
 
         .scroll-indicator:hover {
             opacity: 1;
-            color: var(--primary);
+            color: var(--primary-light);
         }
 
         /* SECTIONS */
@@ -355,6 +365,7 @@
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
+            color: var(--light);
         }
 
         .section-header h2:after {
@@ -376,21 +387,21 @@
             padding: 0 20px;
         }
 
-        /* LOGOS STYLES - AUMENTADOS DE TAMAÑO */
+        /* LOGOS STYLES */
         .logos-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 40px; /* Más espacio entre logos */
+            gap: 40px;
             margin-top: 20px;
         }
 
         .affiliate-logo {
-            height: 100px; /* Aumentado de 60px a 100px */
+            height: 100px;
             width: auto;
             object-fit: contain;
-            filter: brightness(0.95);
+            filter: brightness(0.9); /* Un poco más oscuro */
             transition: var(--transition);
             opacity: 0.9;
         }
@@ -398,20 +409,22 @@
         .affiliate-logo:hover {
             opacity: 1;
             transform: scale(1.05);
-            filter: brightness(1.1);
+            filter: brightness(1);
         }
 
         .schedule-logo {
-            height: 80px; /* Aumentado de 50px a 80px */
-            margin: 20px auto; /* Más margen */
+            height: 80px;
+            margin: 20px auto;
             display: block;
             opacity: 0.9;
+            filter: brightness(0.9);
         }
 
         .timeline-logo {
-            height: 60px; /* Aumentado de 40px a 60px */
-            margin: 15px 0; /* Más margen */
+            height: 60px;
+            margin: 15px 0;
             display: block;
+            filter: brightness(0.9);
         }
 
         /* ABOUT SECTION */
@@ -428,13 +441,14 @@
         .about-text h3 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--primary);
+            color: var(--primary-light);
         }
 
         .about-text p {
             margin-bottom: 20px;
             font-size: 1.1rem;
             line-height: 1.8;
+            color: #DDD;
         }
 
         .profile-photo {
@@ -452,6 +466,7 @@
         .profile-photo:hover {
             border-color: var(--primary);
             transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         .profile-photo img {
@@ -516,6 +531,7 @@
         .timeline-content:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            border-left-color: var(--primary-light);
         }
 
         .timeline-year {
@@ -529,6 +545,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            box-shadow: 0 3px 10px rgba(139, 0, 0, 0.2);
         }
 
         .timeline-content h4 {
@@ -579,12 +596,13 @@
             transition: var(--transition);
             border-bottom: 3px solid transparent;
             height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .value-card:hover {
             transform: translateY(-10px);
             border-bottom: 3px solid var(--primary);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
 
         .value-icon {
@@ -600,7 +618,11 @@
         .value-card h4 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--primary);
+            color: var(--primary-light);
+        }
+
+        .value-card p {
+            color: #CCC;
         }
 
         /* SCHEDULE SECTION */
@@ -624,15 +646,17 @@
             transition: var(--transition);
             border-top: 4px solid var(--primary);
             position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .schedule-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-top-color: var(--primary-light);
         }
 
         .schedule-card h3 {
-            color: var(--primary);
+            color: var(--primary-light);
             margin-bottom: 20px;
             font-size: 1.5rem;
         }
@@ -641,10 +665,11 @@
             margin-bottom: 10px;
             font-size: 1.1rem;
             line-height: 1.6;
+            color: #DDD;
         }
 
         .schedule-highlight {
-            color: var(--primary);
+            color: var(--primary-light);
             font-weight: 700;
             display: block;
             margin: 15px 0;
@@ -675,6 +700,7 @@
             text-decoration: none;
             transition: var(--transition);
             font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .social-btn i {
@@ -692,7 +718,7 @@
         }
 
         .youtube-btn {
-            background: #FF0000;
+            background: #8B0000; /* Rojo oscuro en lugar del rojo brillante */
             color: white;
         }
 
@@ -714,6 +740,7 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--gray-light);
         }
 
         .form-group {
@@ -730,8 +757,8 @@
         .form-control {
             width: 100%;
             padding: 15px;
-            background: #1A1A1A;
-            border: 2px solid #444;
+            background: var(--darker);
+            border: 2px solid var(--gray-light);
             border-radius: 5px;
             color: var(--light);
             font-family: 'Montserrat', sans-serif;
@@ -742,13 +769,13 @@
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+            box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
         }
 
         select.form-control {
             cursor: pointer;
             appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FF0000' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238B0000' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 15px center;
             background-size: 16px;
@@ -773,12 +800,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
         }
 
         .submit-btn:hover {
-            background: #FF3333;
+            background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.3);
         }
 
         /* FOOTER */
@@ -786,7 +814,7 @@
             background: #050505;
             padding: 60px 0 30px;
             text-align: center;
-            border-top: 1px solid var(--gray);
+            border-top: 1px solid var(--gray-light);
         }
 
         .footer-content {
@@ -799,7 +827,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
-            color: var(--primary);
+            color: var(--primary-light);
         }
 
         .footer-links {
@@ -818,7 +846,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--primary);
+            color: var(--primary-light);
         }
 
         .copyright {
@@ -872,11 +900,11 @@
             }
 
             .affiliate-logo {
-                height: 80px; /* Reducido ligeramente para tablet */
+                height: 80px;
             }
 
             .schedule-logo {
-                height: 70px; /* Reducido ligeramente para tablet */
+                height: 70px;
             }
         }
 
@@ -898,13 +926,13 @@
                 top: 80px;
                 left: 0;
                 width: 100%;
-                background: var(--dark);
+                background: var(--darker);
                 flex-direction: column;
                 padding: 20px;
                 display: none;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
                 z-index: 999;
-                border-top: 1px solid var(--gray);
+                border-top: 1px solid var(--gray-light);
             }
             
             .nav-links.active {
@@ -913,7 +941,7 @@
             
             .nav-links a {
                 padding: 15px 0;
-                border-bottom: 1px solid var(--gray);
+                border-bottom: 1px solid var(--gray-light);
                 font-size: 1.1rem;
             }
             
@@ -964,15 +992,15 @@
             }
 
             .affiliate-logo {
-                height: 70px; /* Reducido para móvil pero aún grande */
+                height: 70px;
             }
 
             .schedule-logo {
-                height: 60px; /* Reducido para móvil pero aún grande */
+                height: 60px;
             }
 
             .timeline-logo {
-                height: 50px; /* Reducido para móvil */
+                height: 50px;
             }
         }
 
@@ -1014,21 +1042,21 @@
             }
 
             .affiliate-logo {
-                height: 60px; /* Reducido para móviles pequeños */
+                height: 60px;
             }
 
             .schedule-logo {
-                height: 50px; /* Reducido para móviles pequeños */
+                height: 50px;
             }
 
             .timeline-logo {
-                height: 40px; /* Reducido para móviles pequeños */
+                height: 40px;
             }
         }
 
         /* Loading animation for images */
         .img-loading {
-            background: linear-gradient(90deg, #2A2A2A 25%, #333 50%, #2A2A2A 75%);
+            background: linear-gradient(90deg, #1A1A1A 25%, #222 50%, #1A1A1A 75%);
             background-size: 200% 100%;
             animation: loading 1.5s infinite;
         }
@@ -1098,7 +1126,7 @@
                 <h3>Román Meseguer</h3>
                 <p>Hola, soy <strong>Román Meseguer</strong>, practicante de JiuJitsu desde 2012. Comencé mi camino en Venezuela, continué mi crecimiento en Barcelona y actualmente entreno con el equipo <strong>Tizona</strong> bajo la línea de <strong>Cicero Costha</strong>.</p>
                 
-                <!-- Logos en sección Sobre Mí - AHORA MÁS GRANDES -->
+                <!-- Logos en sección Sobre Mí -->
                 <div class="logos-container" style="margin: 30px 0;">
                     <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
                     <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
@@ -1155,7 +1183,7 @@
                     <span class="timeline-year">2022</span>
                     <h4>Tizona / Cicero Costha</h4>
                     <p>Castelldefels con Edu Da Casa, José Muriel y Cristofer Opazos</p>
-                    <!-- Logo Tizona en timeline - AHORA MÁS GRANDE -->
+                    <!-- Logo Tizona en timeline -->
                     <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="timeline-logo">
                 </div>
             </div>
@@ -1164,7 +1192,7 @@
                     <span class="timeline-year">2024</span>
                     <h4>Cinturón Morado</h4>
                     <p>Otorgado por Edu Da Casa & Cicero Costha</p>
-                    <!-- Logo Cicero Costha en timeline - AHORA MÁS GRANDE -->
+                    <!-- Logo Cicero Costha en timeline -->
                     <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="timeline-logo">
                 </div>
             </div>
@@ -1243,28 +1271,28 @@
         <div class="schedule-container">
             <div class="schedule-card">
                 <h3>CLASES KIDS</h3>
-                <!-- Logo Tizona Kids - AHORA MÁS GRANDE -->
+                <!-- Logo Tizona Kids -->
                 <img src="./IMAGES/TIZONA_KIDS_LOGO_BJJ.png" alt="Tizona Kids" class="schedule-logo">
                 <p><span class="schedule-highlight">Lunes, Miércoles y Viernes</span></p>
                 <p>17:30 — 18:30</p>
                 <p>Tizona Sparta Fight Club · Castelldefels</p>
-                <!-- Logo Tizona principal - AHORA MÁS GRANDE -->
+                <!-- Logo Tizona principal -->
                 <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="schedule-logo" style="margin-top: 25px;">
             </div>
             <div class="schedule-card">
                 <h3>ADULTOS</h3>
-                <!-- Logo Daithon Gym - AHORA MÁS GRANDE -->
+                <!-- Logo Daithon Gym -->
                 <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="schedule-logo">
                 <p><span class="schedule-highlight">Martes y Jueves</span></p>
                 <p>19:00 — 20:30</p>
-                <p>Gimnasio Dayton · L'Hospitalet</p>
+                <p>Gimnasio Daithon · L'Hospitalet</p> <!-- CORREGIDO: Dayton -> Daithon -->
                 <p>Open Mat / Drill / Gi / No-Gi · Todos los niveles</p>
-                <!-- Logo Cicero Costha - AHORA MÁS GRANDE -->
+                <!-- Logo Cicero Costha -->
                 <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="schedule-logo" style="margin-top: 25px;">
             </div>
         </div>
         
-        <!-- Logos de afiliación al final de horarios - AHORA MÁS GRANDES -->
+        <!-- Logos de afiliación al final de horarios -->
         <div class="logos-container" style="margin-top: 60px;">
             <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
             <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
@@ -1339,7 +1367,7 @@
             <div class="footer-logo">MESEGUER BROTHERS JIUJITSU</div>
             <p>Instructor · Competidor · Formador de Campeones</p>
             
-            <!-- Logos en footer - AHORA MÁS GRANDES -->
+            <!-- Logos en footer -->
             <div class="logos-container" style="margin: 30px 0;">
                 <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
                 <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
