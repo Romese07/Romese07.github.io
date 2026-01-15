@@ -14,10 +14,12 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Preconexiones para mejor rendimiento -->
-    https://fonts.googleapis.com
-    https://fonts.gstatic.com
-    https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Oswald:wght@400;600;700&display=swap
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.chema Markup para SEO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema Markup para SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -461,20 +463,20 @@
 <!-- HEADER -->
 <header class="header">
     <div class="container header-container">
-        #
+        <a href="#" class="logo">
             <!-- LOGO PRINCIPAL -->
-            ./IMAGES/logo_circulo_rojo_y_negro.PNG
+            <img src="./IMAGES/logo_circulo_rojo_y_negro.PNG" alt="Meseguer Brothers JiuJitsu" class="logo-img">
             <div class="logo-text">MESEGUER BROTHERS</div>
         </a>
         <button class="mobile-menu-btn" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
         <nav class="nav-links">
-            <aerfilSobre Mí</a>
-            #trayectoriaTrayectoria</a>
-            #valoresValores</a>
-            #horariosHorarios</a>
-            #contactoContacto</a>
+            <a href="#perfil">Sobre Mí</a>
+            <a href="#trayectoria">Trayectoria</a>
+            <a href="#valores">Valores</a>
+            <a href="#horarios">Horarios</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </div>
 </header>
@@ -493,13 +495,13 @@
         </div>
 
         <div class="hero-buttons">
-            #perfilConoce Mi Historia</a>
-            #contactoÚnete al Equipo</a>
+            <a href="#perfil" class="btn-main">Conoce Mi Historia</a>
+            <a href="#contacto" class="btn-secondary">Únete al Equipo</a>
             <!-- BOTÓN PARA ABRIR PANEL MIGUEL -->
-            #Ver perfil de Miguel</a>
+            <button id="open-miguel-btn" class="btn-secondary">Ver perfil de Miguel</button>
         </div>
     </div>
-    #perfil
+    <a href="#perfil" class="scroll-indicator">
         <i class="fas fa-chevron-down"></i>
     </a>
 </section>
@@ -518,15 +520,15 @@
 
                 <!-- Logos en sección Sobre Mí -->
                 <div class="logos-container" style="margin: 30px 0;">
-                    ./IMAGES/cicero-costha-barcelona-modified.png
-                    ./IMAGES/LOGO_TIZONA_CALIDAD.jpg
+                    <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
+                    <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
                 </div>
 
                 <p>A lo largo de los años he tenido el privilegio de entrenar con grandes maestros y construir una filosofía basada en disciplina, humildad, marcialidad y trabajo duro. Hoy combino mi rol de competidor con el de instructor, enfocado en la formación de atletas, guerreros y personas de todas las edades que busquen crecer, comenzar o continuar su camino en el Arte Suave.</p>
                 <p>Mi objetivo es transmitir los valores del JiuJitsu a las nuevas generaciones mientras continúo mi desarrollo como competidor y artista marcial.</p>
             </div>
             <div class="profile-photo">
-                ./IMAGES/roman_perfil.jpeg
+                <img src="./IMAGES/roman_perfil.jpeg" alt="Román Meseguer - Instructor de JiuJitsu">
             </div>
         </div>
     </div>
@@ -574,7 +576,7 @@
                     <h4>Tizona / Cicero Costha</h4>
                     <p>Castelldefels con Edu Da Casa, José Muriel y Cristofer Opazos</p>
                     <!-- Logo Tizona en timeline -->
-                    ./IMAGES/LOGO_TIZONA_CALIDAD.jpg
+                    <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="timeline-logo">
                 </div>
             </div>
             <div class="timeline-item">
@@ -583,7 +585,7 @@
                     <h4>Cinturón Morado</h4>
                     <p>Otorgado por Edu Da Casa &amp; Cicero Costha</p>
                     <!-- Logo Cicero Costha en timeline -->
-                    ./IMAGES/cicero-costha-barcelona-modified.png
+                    <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="timeline-logo">
                 </div>
             </div>
             <div class="timeline-item">
@@ -650,32 +652,32 @@
             <div class="schedule-card">
                 <h3>CLASES KIDS</h3>
                 <!-- Logo Tizona Kids -->
-                ./IMAGES/TIZONA_KIDS_LOGO_BJJ.png
+                <img src="./IMAGES/TIZONA_KIDS_LOGO_BJJ.png" alt="Tizona Kids" class="schedule-logo">
                 <p><span class="schedule-highlight">Lunes, Miércoles y Viernes</span></p>
                 <p>17:30 — 18:30</p>
                 <p>Tizona Sparta Fight Club · Castelldefels</p>
                 <!-- Logo Tizona principal -->
-                ./IMAGES/LOGO_TIZONA_CALIDAD.jpg
+                <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="schedule-logo" style="margin-top: 25px;">
             </div>
             <div class="schedule-card">
                 <h3>ADULTOS</h3>
                 <!-- Logo Daithon Gym -->
-                ./IMAGES/daithon_LOGO.jpg
+                <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="schedule-logo">
                 <p><span class="schedule-highlight">Martes y Jueves</span></p>
                 <p>19:00 — 20:30</p>
                 <p>Gimnasio Daithon · L'Hospitalet</p>
                 <p>Open Mat / Drill / Gi / No-Gi · Todos los niveles</p>
                 <!-- Logo Cicero Costha -->
-                ./IMAGES/cicero-costha-barcelona-modified.png
+                <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="schedule-logo" style="margin-top: 25px;">
             </div>
         </div>
 
         <!-- Logos de afiliación al final de horarios -->
         <div class="logos-container" style="margin-top: 60px;">
-            ./IMAGES/cicero-costha-barcelona-modified.png
-            ./IMAGES/LOGO_TIZONA_CALIDAD.jpg
-            ./IMAGES/daithon_LOGO.jpg
-            ./IMAGES/TIZONA_KIDS_LOGO_BJJ.png
+            <img src="./IMAGES/cicero-costha-barcelona-modified.png" alt="Cicero Costha" class="affiliate-logo">
+            <img src="./IMAGES/LOGO_TIZONA_CALIDAD.jpg" alt="Tizona" class="affiliate-logo">
+            <img src="./IMAGES/daithon_LOGO.jpg" alt="Daithon Gym" class="affiliate-logo">
+            <img src="./IMAGES/TIZONA_KIDS_LOGO_BJJ.png" alt="Tizona Kids" class="affiliate-logo">
         </div>
     </div>
 </section>
@@ -688,13 +690,13 @@
             <p>Sígueme en redes sociales y mantente al día con mi evolución</p>
         </div>
         <div class="social-buttons">
-            https://instagram.com/Romesebjj_
+            <a class="social-btn instagram-btn" href="https://instagram.com/Romesebjj_" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i> @Romesebjj_
             </a>
-            https://wa.me/34602462880
+            <a class="social-btn whatsapp-btn" href="https://wa.me/34602462880" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> +34 602 46 2880
             </a>
-            #
+            <a class="social-btn youtube-btn" href="#" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-youtube"></i> YouTube
             </a>
         </div>
@@ -709,7 +711,7 @@
             <p>Comienza tu viaje en el JiuJitsu o lleva tu práctica al siguiente nivel</p>
         </div>
         <div class="form-container">
-            https://formspree.io/f/mzzyozpy
+            <form action="https://formspree.io/f/mzzyozpy" method="post">
                 <div class="form-group">
                     <label for="name">Tu nombre</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Ej: Carlos Rodríguez" required>
